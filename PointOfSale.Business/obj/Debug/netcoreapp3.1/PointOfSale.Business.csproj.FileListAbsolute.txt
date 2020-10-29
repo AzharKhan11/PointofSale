@@ -1,0 +1,5 @@
+D:\InvozealTechnologies\PointOfSale\PointOfSale.Web\PointOfSale.Business\bin\Debug\netcoreapp3.1\PointOfSale.Business.deps.json
+D:\InvozealTechnologies\PointOfSale\PointOfSale.Web\PointOfSale.Business\bin\Debug\netcoreapp3.1\PointOfSale.Business.dll
+D:\InvozealTechnologies\PointOfSale\PointOfSale.Web\PointOfSale.Business\obj\Debug\netcoreapp3.1\PointOfSale.Business.csprojAssemblyReference.cache
+D:\InvozealTechnologies\PointOfSale\PointOfSale.Web\PointOfSale.Business\obj\Debug\netcoreapp3.1\PointOfSale.Business.AssemblyInfoInputs.cache
+D:\InvozealTechnologies\PointOfSale\PointOfSale.Web\PointOfSale.Business\obj\Debug\netcoreapp3.1\PointOfSale.Business.AssemblyInfo.cs
