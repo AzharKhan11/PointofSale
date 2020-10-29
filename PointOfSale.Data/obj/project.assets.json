@@ -1255,11 +1255,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Data\\PointOfSale.Data.csproj",
+      "projectUniqueName": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Data\\PointOfSale.Data.csproj",
       "projectName": "PointOfSale.Data",
-      "projectPath": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Data\\PointOfSale.Data.csproj",
+      "projectPath": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Data\\PointOfSale.Data.csproj",
       "packagesPath": "C:\\Users\\Azhar Khan\\.nuget\\packages\\",
-      "outputPath": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Data\\obj\\",
+      "outputPath": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Azhar Khan\\AppData\\Roaming\\NuGet\\NuGet.Config",

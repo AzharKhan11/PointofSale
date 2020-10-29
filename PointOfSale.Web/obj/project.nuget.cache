@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aGBTdK9yRqHWUFGzwHpeYX5l/tKwW1C7umUu4NwARIMhI0juvIsgDt/UbUAorFKaKNX2dcNyqsUZecVUMYymjQ==",
+  "dgSpecHash": "9OyH8LNSMmr4vFusEWsALqur7Uk8f2r31Ht8syJX/hBlPAWoR323o17S/8DLSmQYW6FDPwhwY4B3oa3spWsmLA==",
   "success": true,
-  "projectFilePath": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Web\\PointOfSale.Web.csproj",
+  "projectFilePath": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Web\\PointOfSale.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Azhar Khan\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Azhar Khan\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.9\\microsoft.aspnetcore.mvc.razor.extensions.3.1.9.nupkg.sha512",

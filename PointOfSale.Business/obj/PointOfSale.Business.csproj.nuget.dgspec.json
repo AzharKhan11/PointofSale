@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Business\\PointOfSale.Business.csproj": {}
+    "D:\\InvozealTechnologies\\New POS\\PointOfSale.Business\\PointOfSale.Business.csproj": {}
   },
   "projects": {
-    "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Business\\PointOfSale.Business.csproj": {
+    "D:\\InvozealTechnologies\\New POS\\PointOfSale.Business\\PointOfSale.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Business\\PointOfSale.Business.csproj",
+        "projectUniqueName": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Business\\PointOfSale.Business.csproj",
         "projectName": "PointOfSale.Business",
-        "projectPath": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Business\\PointOfSale.Business.csproj",
+        "projectPath": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Business\\PointOfSale.Business.csproj",
         "packagesPath": "C:\\Users\\Azhar Khan\\.nuget\\packages\\",
-        "outputPath": "D:\\InvozealTechnologies\\PointOfSale\\PointOfSale.Web\\PointOfSale.Business\\obj\\",
+        "outputPath": "D:\\InvozealTechnologies\\New POS\\PointOfSale.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Azhar Khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
