@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PointOfSale.Data.Entities
 {
-    class BaseEntity
+   public class BaseEntity
     {
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
