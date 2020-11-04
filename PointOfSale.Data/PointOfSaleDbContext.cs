@@ -6,22 +6,22 @@ using System.Text;
 
 namespace PointOfSale.Data
 {
-    class PointOfSaleDbContext:DbContext
+   public class PointOfSaleDbContext :DbContext
     {
         public PointOfSaleDbContext(DbContextOptions<PointOfSaleDbContext> options) : base(options)
         {
 
         }
         #region
-        public DbSet<AdminUsersEntity> adminUsers { get; set; }
-        public DbSet<CategoryEntity> categories { get; set; }
-        public DbSet<CustomersEntity> customers { get; set; }
-        public DbSet<ItemEntity> items { get; set; }
-        public DbSet<RatListOfItems> rateList { get; set; }
-        public DbSet<OrderEntity> order { get; set; }
-        public DbSet<OrderHistoryEntity> orderHistory { get; set; }
-        public DbSet<RoleEntity> roles { get; set; }
-        public DbSet<StockEntity> stock { get; set; }
+        public DbSet<AdminUsersEntity> AdminUsers { get; set; }
+        public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<CustomersEntity> Customers { get; set; }
+        public DbSet<ItemEntity> Items { get; set; }
+        public DbSet<RatListOfItems> RateList { get; set; }
+        public DbSet<OrderEntity> Order { get; set; }
+        public DbSet<OrderHistoryEntity> OrderHistory { get; set; }
+        public DbSet<RoleEntity> Roles { get; set; }
+        public DbSet<StockEntity> Stock { get; set; }
         #endregion
 
     }

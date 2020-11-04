@@ -8,7 +8,7 @@ namespace PointOfSale.Data.Entities
     {
         public int Id { get; set; }
         public string OrdertakerName { get; set; }
-        public string orderbuyersName { get; set; }
+        public string OrderbuyersName { get; set; }
         public int OrderId { get; set; }
         public decimal TotalOrdreAmouont { get; set; }
         public DateTime LastorderDate  { get; set; }

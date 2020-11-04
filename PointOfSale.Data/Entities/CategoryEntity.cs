@@ -10,8 +10,8 @@ namespace PointOfSale.Data.Entities
         public string CategoryName { get; set; }
         public string Description { get; set; }
         public string CategoryImage { get; set; }
-        public string SalePrice { get; set; }
-        public string PurchasePrice { get; set; }
+        public decimal SalePrice { get; set; }
+        public decimal PurchasePrice { get; set; }
         public int ModifyBy { get; set; }
     }
 }

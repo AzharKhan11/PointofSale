@@ -14,7 +14,6 @@ namespace PointOfSale.Data.Entities
         public int PhoneNumber { get; set; }
         public string Password { get; set; }
         public bool IsDeleted { get; set; }
-        public string Role { get; set; }
         public int ModifyBy { get; set; }
     }
 }

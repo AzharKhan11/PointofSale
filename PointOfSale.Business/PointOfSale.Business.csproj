@@ -14,4 +14,8 @@
     <Folder Include="Domain\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PointOfSale.Data\PointOfSale.Data.csproj" />
+  </ItemGroup>
+
 </Project>
