@@ -3,17 +3,19 @@ using PointOfSale.Data.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+
 namespace PointOfSale.Data.Repositories.Customer
 {
-    public interface ICustomersRepository
+    public interface ICustomerRepository
     {
-        Task<CustomersEntity> GetCustomerDetail(int CustomerId );
-        Task<IEnumerable<CustomersEntity>> GetCustomerList();
+        Task<CustomersEntity> GetCustomerDetail(int customerId);
+        Task<IEnumerable<CustomersEntity>> GetCustomersList();
         Task<CustomersEntity> SaveCustomerDetail(CustomersEntity model);
         Task<CustomersEntity> UpdateCustomerDetail(CustomersEntity model);
-        Task<CustomersEntity> DeleteCustomerDetails(int id);
+        Task DeleteCustomerDetail(int id);
+
     }
-    public class CustomersRepository : ICustomersRepository
+    public class CustomersRepository : ICustomerRepository
     {
         private readonly PointOfSaleDbContext _model;
 
@@ -21,33 +23,32 @@ namespace PointOfSale.Data.Repositories.Customer
         {
             _model = model;
         }
-        public async Task<CustomersEntity> GetCustomerDetail(int CustomerId)
+
+        public async Task<CustomersEntity> GetCustomerDetail(int customerId)
         {
-            return await _model.Customers.FindAsync(CustomerId);
+            return await _model.Customers.FindAsync(customerId);
         }
-       public async Task<IEnumerable<CustomersEntity>> GetCustomerList()
+        public async Task<IEnumerable<CustomersEntity>> GetCustomersList()
         {
             return await _model.Customers.ToListAsync();
         }
         public async Task<CustomersEntity> SaveCustomerDetail(CustomersEntity model)
         {
             await _model.Customers.AddAsync(model);
-            _model.SaveChangesAsync();
+            _model.SaveChanges();
             return model;
         }
-        public Task<CustomersEntity> UpdateCustomerDetail(CustomersEntity model)
+        public async Task<CustomersEntity> UpdateCustomerDetail(CustomersEntity model)
         {
             _model.Customers.Update(model);
-            _model.SaveChangesAsync();
-            return;
+            await _model.SaveChangesAsync();
+            return model;
         }
-        public async Task<CustomersEntity> DeleteCustomerDetails(int id)
+        public async Task DeleteCustomerDetail(int id)
         {
             var model = _model.Customers.Find(id);
             _model.Customers.Remove(model);
             await _model.SaveChangesAsync();
-            return model;
-            
         }
     }
 }
