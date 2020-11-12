@@ -1,39 +1,70 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PointOfSale.Business.Domain.Customer;
-using PointOfSale.Data;
+using PointOfSale.Data.Entities;
 using PointOfSale.Web.ViewModels;
 
-namespace PointOfSale.Web.Controllers
+namespace PosPortal.Web.Controllers
 {
-    public class CustomersController : Controller
+    public class ContactController : Controller
     {
         private readonly ICustomerService _customerService;
 
-        public CustomersController(ICustomerService customerService)
+        public ContactController(ICustomerService customerService)
         {
             _customerService = customerService;
         }
+
         [HttpGet]
-        public async Task <IActionResult> Customer()
+        public async Task<IActionResult> Customer()
         {
-            var model = new CUstomerViewModel
+            var model = new CustomerViewModel
             {
-                CustomerList =await _customerService.GetCustomersList()
+                CustomerList = await _customerService.GetCustomersList()
             };
-            return View("~/Views/Customer/Customer.cshtml", model); 
+            return View("~/Views/Customer/Customer.cshtml", model);
         }
-        public async Task<IActionResult> GetContactDetail(int id)
+
+        [HttpGet]
+        public async Task<IActionResult> GetCustomerDetail(int id = 0)
         {
-            var model = new CUstomerViewModel();
-            if (id>0)
+            var model = new CustomerViewModel();
+            if (id > 0)
             {
                 model.CustomersDetails = await _customerService.GetCustomerDetail(id);
             }
-            return PartialView("~/Views/Contacts/Partials/_ContactDetail.cshtml", model.CustomersDetails);
+            return PartialView("~/Views/Customer/Partials/_CustomerDetail.cshtml", model.CustomersDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SaveCustomerDetail(CustomersEntity model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _customerService.SaveCustomerDetail(model);
+            }
+            return RedirectToAction("Customer");
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateCustomerDetail(CustomersEntity model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _customerService.UpdateCustomerDetail(model);
+            }
+            
+            return RedirectToAction("Customer");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteCustomerDetail(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                 await _customerService.DeleteCustomerDetail(id);
+            }
+            return RedirectToAction("Customer");
         }
     }
 }

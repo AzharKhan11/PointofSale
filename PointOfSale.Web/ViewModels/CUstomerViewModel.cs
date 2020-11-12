@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 namespace PointOfSale.Web.ViewModels
 {
-    public class CUstomerViewModel
+    public class CustomerViewModel
     {
-        public CUstomerViewModel()
+        public CustomerViewModel()
         {
             CustomersDetails = new CustomersEntity();
         }

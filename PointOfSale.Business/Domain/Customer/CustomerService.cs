@@ -10,7 +10,7 @@ namespace PointOfSale.Business.Domain.Customer
         Task<CustomersEntity> GetCustomerDetail(int customerId);
         Task<IEnumerable<CustomersEntity>> GetCustomersList();
         Task<CustomersEntity> SaveCustomerDetail(CustomersEntity model);
-        Task<CustomersEntity>UpdateCustomerDetail(CustomersEntity model);
+        Task<CustomersEntity> UpdateCustomerDetail(CustomersEntity model);
         Task DeleteCustomerDetail(int id);
     }
     public class CustomerService : ICustomerService
@@ -36,7 +36,7 @@ namespace PointOfSale.Business.Domain.Customer
         {
             return await _customerRepository.UpdateCustomerDetail(model);
         }
-       public async Task DeleteCustomerDetail(int id)
+        public async Task DeleteCustomerDetail(int id)
         {
             await _customerRepository.DeleteCustomerDetail(id);
         }

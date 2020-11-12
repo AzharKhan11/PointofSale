@@ -824,5 +824,8 @@ D:\InvozealTechnologies\New POS\PointOfSale.Web\bin\Debug\netcoreapp3.1\PointOfS
 D:\InvozealTechnologies\New POS\PointOfSale.Web\bin\Debug\netcoreapp3.1\PointOfSale.Data.dll
 D:\InvozealTechnologies\New POS\PointOfSale.Web\bin\Debug\netcoreapp3.1\PointOfSale.Business.pdb
 D:\InvozealTechnologies\New POS\PointOfSale.Web\bin\Debug\netcoreapp3.1\PointOfSale.Data.pdb
-D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Customer.cshtml.g.cs
-D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Partials\_CustomerList.cshtml.g.cs
+D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Customer.cshtml.g.cs
+D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Partials\_CustomersList.cshtml.g.cs
+D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Partials\_CustomerDetails.cshtml.g.cs
+D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Partials\_SaveCustomerDetails .cshtml.g.cs
+D:\InvozealTechnologies\New POS\PointOfSale.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Partials\_UpdateCustomerDetails.cshtml.g.cs

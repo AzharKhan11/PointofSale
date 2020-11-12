@@ -1,0 +1,15 @@
+﻿@{ ViewData["Title"] = "Customer Managment"; }
+@model PointOfSale.Web.ViewModels.CustomerViewModel
+<section class="content-header">
+    <div class="row breadcrumb">
+        <div class="col-8 pos-vertical-align-center">
+            @*<a href="~/"><i class="sidebar-item-icon mdi mdi-desktop"></i> Dashboard</a> <span>/</span>*@
+            <span class="active">ניהול אנשי קשר</span>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-primary btn-rounded btn-icon pos-pull-right" data-toggle="tooltip" data-placement="bottom" id="btnContactViewDetails" title="Add new contact" onclick="ViewContactDetail();"><i class="mdi mdi-plus"></i></button>
+        </div>
+    </div>
+</section>
+<div class="card" id="ContactDetailForm" style="display:none"></div>
+@{ await Html.RenderPartialAsync("~/Views/Customers/Partials/_CustomersList.cshtml", Model?.CustomerList); }

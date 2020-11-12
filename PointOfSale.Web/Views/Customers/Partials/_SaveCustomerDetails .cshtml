@@ -1,0 +1,41 @@
+﻿@model PointOfSale.Data.Entities.CustomersEntity
+<form enctype="multipart/form-data" asp-action="Sa" asp-controller="Customers" method="post">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-6 pos-vertical-align-center">
+                <span class="">Customer Details</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CreatedOn" />
+        <input type="hidden" asp-for="CreatedBy" />
+
+        <div class="form-row">
+
+            <div class="form-group col-6 col-lg-4">
+                <label class="form-label" asp-for="FirstName">First Name</label>
+                <input type="text" asp-for="FirstName" class="form-control datepicker" placeholder="הכנס תאריך">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-4">
+                <label class="form-label" asp-for="LastName">Last Name</label>
+                <input asp-for="LastName" class="form-control" placeholder="Invoice No" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-4">
+                <label class="form-label" asp-for="Email">Email </label>
+                <input asp-for="Email" class="form-control" placeholder="Check No" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-4">
+                <label class="form-label" asp-for="Address">Address</label>
+                <input type="text" asp-for="Address" class="form-control datepicker" placeholder="Date of Cheque" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</form>
+@{ await Html.RenderPartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml"); }

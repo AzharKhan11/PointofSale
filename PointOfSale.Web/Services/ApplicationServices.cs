@@ -2,7 +2,7 @@
 using PointOfSale.Business.Domain.Customer;
 using PointOfSale.Data.Repositories.Customer;
 
-namespace PosPortal.Web.Services
+namespace PointOfSale.Web.Services
 {
     public static class ApplicationServices
     {

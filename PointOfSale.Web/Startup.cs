@@ -49,7 +49,7 @@ namespace PointOfSale.Web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Customers}/{action=Customer0}/{id?}");
+                    pattern: "{controller=Customers}/{action=Customer}/{id?}");
             });
         }
     }

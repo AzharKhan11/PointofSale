@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PointOfSale.Data.Entities.CustomersEntity>
+<div class="card mt-1 mb-1" id="btnCustomerList">
+    <div class="card-body" style="overflow-x:auto">
+        <table id="dataTable" class="table table-bordered table-striped">
+            <thead style="text-align:center">
+                <tr>
+
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th style="max-width:100px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int CustomerCount = 1;
+                }
+                @foreach (var item in Model)
+                {
+                <tr>
+
+
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Email</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.Address</td>
+                    <td>
+                        <button id="view" data-toggle="tooltip" data-placement="bottom" title="צפה בפרטים" class="btn btn-success btn-rounded btn-icon pos-action-icon" onclick="ViewCustomerDetail(@item.Id)"><i class="mdi mdi-eye-check-outline"></i></button>
+                        <button id="delete" data-toggle="tooltip" data-placement="bottom" title="מחק פרטים" class="btn btn-danger btn-rounded btn-icon pos-action-icon" onclick="DeleteCustomerDetail(@item.Id)"><i class="mdi mdi-trash-can-outline"></i></button>
+                    </td>
+                    <td>
+                        @CustomerCount
+                    </td>
+                </tr>
+                    CustomerCount++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
