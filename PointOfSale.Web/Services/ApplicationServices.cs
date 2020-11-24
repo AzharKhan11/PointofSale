@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PointOfSale.Business.Domain.Customer;
-using PointOfSale.Data.Repositories.Customer;
+using PointOfSale.Business.Domain.Categorys;
+using PointOfSale.Data.Repositories.Categorys;
 
 namespace PointOfSale.Web.Services
 {
@@ -9,13 +9,10 @@ namespace PointOfSale.Web.Services
         public static void AddServices(IServiceCollection services)
         {
             #region Services
-            services.AddTransient<ICustomerService, CustomerService>();
-
+            services.AddTransient<ICategoryService, CategoryService>();
             #endregion
-
-            #region Repositories
-            services.AddTransient<ICustomerRepository, CustomersRepository>();
-
+            #region Repository
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
             #endregion
         }
     }

@@ -1,0 +1,41 @@
+﻿@{ ViewData["Title"] = "Category Managment"; }
+@model IEnumerable<PointOfSale.Data.Entities.CategoryEntity>
+<div class="card mt-1 mb-1">
+    <div class="card-body" id="btnItemList" style="overflow-x:auto">
+        <table id="dataTable" class="table table-bordered table-striped">
+            <thead style="text-align:center">
+                <tr>
+                    <th>Sr:No</th>
+                    <th>Category Name</th>
+                    <th>Sale Price</th>
+                    <th>Purchase Price</th>
+                    <th>Description</th>
+                    <th style="max-width:20px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int categoryCount = 1;
+                }
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @categoryCount
+                    </td>
+                    <td>@item.CategoryName</td>
+                    <td>@item.SalePrice</td>
+                    <td>@item.PurchasePrice</td>
+                    <td>@item.Description</td>
+                    <td>
+                        <a id="view_category" name="CategoryId" value="@item.CategoryId" title="View Record!" class="@item.CategoryId" onclick="fnView(@item.CategoryId)"><i class="fa fa-eye"></i></a>
+                        <a id="edit_category" name="CategoryId" value="@item.CategoryId" title="Edit Record!" onclick="fnEdit(@item.CategoryId)"><i class="fa fa-edit"></i></a>
+                        <a id="delete_category" name="CategoryId" value="@item.CategoryId" title="Delete Record!" class="delete_@item.CategoryId" onclick="fnDelete(@item.CategoryId)"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                    categoryCount++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

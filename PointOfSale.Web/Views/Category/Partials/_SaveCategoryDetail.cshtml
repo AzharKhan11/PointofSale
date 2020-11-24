@@ -1,0 +1,51 @@
+﻿@model PointOfSale.Data.Entities.CategoryEntity
+<form asp-action="SaveCategoryDetail" asp-controller="Category" method="post">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-6 pos-vertical-align-center">
+                <span class="">Add New Category</span>
+            </div>
+            @*<div class="col-6">
+                    <div class="pos-pull-right">
+                        <button type="button" data-toggle="tooltip" data-placement="bottom" id="btnItemViewDetails" title="ביטול" class="btn btn-danger btn-rounded btn-icon" onclick="CloseItemDetail();"><i class="mdi mdi-close"></i></button>
+                        <button type="reset" id="btnReset" data-toggle="tooltip" data-placement="bottom" title="אפס" class="btn btn-primary btn-rounded btn-icon"><i class="mdi mdi-refresh"></i></button>
+                        <button type="submit" id="btnSave" data-toggle="tooltip" data-placement="bottom" title="שמור פריט" class="btn btn-success btn-rounded btn-icon"><i class="mdi mdi-content-save"></i></button>
+                    </div>
+                </div>*@
+</div>
+    </div>
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="CategoryId" />
+        <input type="hidden" asp-for="CreatedBy" />
+        <input type="hidden" asp-for="CreatedOn" />
+        <div class="form-row">
+            <div class="form-group col-6 col-lg-6">
+                <label class="form-label" asp-for="CategoryName">Name</label>
+                <input asp-for="CategoryName" class="form-control" placeholder="Category Name" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-6">
+                <label class="form-label" asp-for="SalePrice">Sale Price</label>
+                <input asp-for="SalePrice" class="form-control" placeholder="Sale Price" />
+                <span asp-validation-for="SalePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-6">
+                <label class="form-label" asp-for="PurchasePrice"> Purchase Price</label>
+                <input asp-for="PurchasePrice" class="form-control" placeholder="Pack Purchase Price" />
+                <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-6">
+                <label class="form-label" asp-for="CategoryImage">Upload Image</label>
+                <input asp-for="CategoryImage" class="form-control" placeholder="Upload Image" />
+                <span asp-validation-for="CategoryImage" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6 col-lg-12">
+                <label class="form-label" asp-for="Description">Description</label>
+                <input asp-for="Description" class="form-control" placeholder="Description">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</form>
+@{ await Html.RenderPartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml"); }

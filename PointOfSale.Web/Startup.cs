@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PointOfSale.Data;
+using PointOfSale.Web.Services;
 
 namespace PointOfSale.Web
 {
@@ -24,6 +25,7 @@ namespace PointOfSale.Web
             services.AddControllersWithViews();
             services.AddRazorPages()
                     .AddRazorRuntimeCompilation();
+            ApplicationServices.AddServices(services);
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,7 +51,7 @@ namespace PointOfSale.Web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Customers}/{action=Customer}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

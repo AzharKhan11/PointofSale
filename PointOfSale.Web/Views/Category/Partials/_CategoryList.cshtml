@@ -1,0 +1,64 @@
+﻿@{ ViewData["Title"] = "Category Managment"; }
+@model IEnumerable<PointOfSale.Data.Entities.CategoryEntity>
+<div class="card mt-1 mb-1">
+    <div class="card-body" id="btnCategoryList" style="overflow-x:auto">
+        <table id="dataTable" class="table table-bordered table-striped">
+            <thead style="text-align:center">
+                <tr>
+                    <th>Sr:No</th>
+                    <th>Category Name</th>
+                    <th>Sale Price</th>
+                    <th>Purchase Price</th>
+                    <th>Description</th>
+                    <th style="max-width:20px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int categoryCount = 1;
+                }
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @categoryCount
+                    </td>
+                    <td>@item.CategoryName</td>
+                    <td>@item.SalePrice</td>
+                    <td>@item.PurchasePrice</td>
+                    <td>@item.Description</td>
+                    <td>
+                    <td>
+                        <button id="view" data-toggle="tooltip" data-placement="bottom" title="View Record" class="btn btn-success btn-rounded btn-icon pos-action-icon" onclick="ViewItemDetail(@item.CategoryId)"><i class="mdi mdi-eye-check-outline"></i></button>
+                        <button id="delete" data-toggle="tooltip" data-placement="bottom" title="Delete Record" class="btn btn-danger btn-rounded btn-icon pos-action-icon" onclick="DeleteItemDetail(@item.CategoryId)"><i class="mdi mdi-trash-can-outline"></i></button>
+                        <button id="delete" data-toggle="tooltip" data-placement="bottom" title="Delete Record" class="btn btn-danger btn-rounded btn-icon pos-action-icon" onclick="DeleteItemDetail(@item.CategoryId)"><i class="mdi mdi-trash-can-outline"></i></button>
+                    </td>
+                    </td>
+                </tr>
+                    categoryCount++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function ViewItemDetail(id) {
+        $("#ViewItemDetail").hide();
+        $("#btnCategoryList").hide();
+        $.ajax({
+            type: 'Get',
+            data: { id: id },
+            url: '/Category/GetCategoryDetail',
+            success: function (data) {
+                if (typeof data !== "undefined" && data !== "" && data !== null) {
+                    $('#CategoryDetailForm').html(data);
+                    $('#CategoryDetailForm').show();
+                }
+                else {
+                    $.notify("Something is wrong.", "danger");
+                }
+            }
+        });
+    }
+</script>

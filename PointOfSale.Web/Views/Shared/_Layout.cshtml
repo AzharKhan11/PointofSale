@@ -130,6 +130,9 @@
         function fnLoadPage() {
             $('.se-pre-con').show();
         }
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
     </script>
 </head>
 <body>
@@ -246,7 +249,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="~/categories" title="Categories">
+                        <a class="nav-link" asp-action="Category" asp-controller="Category">
                             <i class="sidebar-item-icon fa fa-database"></i>
                             <span class="nav-label">Categories</span>
                         </a>
